@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Choo Choo</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="jumbotron banner red-carpet text-center">
+        <h1 class="display-4">The Island of Sodor</h1>
+        <h4 classs="lead">Sir Topham Hat's Reign</h4>
+    </div>
+    <div class="container scheduleWrapper">
+        <table class="table">Current Train Schedule
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Percy</td>
+                    <td>Crosby</td>
+                    <td>25</td>
+                    <td>03:55 pm</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Thomas</td>
+                    <td>Tidmouth</td>
+                    <td>50</td>
+                    <td>05:55 pm</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Gordon</td>
+                    <td>Ballahoo</td>
+                    <td>75</td>
+                    <td>06:15 pm</td>
+                    <td>128</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container addTrainWrapper">
+        <form>
+            <div class="form-group">
+                <label for="trainName"><strong>Train Name</strong></label>
+                <input type="text" class="form-control" id="trainName" placeholder="Enter train">
+            </div>
+            <div class="form-group">
+                <label for="destination"><strong>Destination</strong></label>
+                <input type="text" class="form-control" id="destination" placeholder="Enter destination">
+            </div>
+            <div class="form-group">
+                <label for="firstRun"><strong>First Train Time (HH:mm - 24-hour clock)</strong></label>
+                <input type="text" class="form-control" id="firstRun" placeholder="Enter time of first train in HH:mm">
+            </div>
+            <div class="form-group">
+                <label for="frequency"><strong>Frequency (min.)</strong></label>
+                <input type="text" class="form-control" id="frequency"
+                    placeholder="How often does the train run (in minutes)?">
+            </div>
+            <div class="form-group">
+                <button class="btn-primary" id="add-button" type="submit">Submit</button></td>
+            </div>
+    </div>
+    </form>
+    </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
