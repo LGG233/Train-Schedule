@@ -1,7 +1,20 @@
 .jumbotron {
-    background-color: crimson!important
+    background-color: royalblue!important
 }
 
+thead {
+    background-color: limegreen!important;
+}
+
+.table-top {
+    background-color: limegreen;
+}
+
+.table-header {
+    background-color: indianred;
+    line-height: 300%;
+    font-weight: bold;
+}
 .modal {
     display: none; /* Hidden by default */
     position: relative; /* Stay in place */
