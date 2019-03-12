@@ -32,18 +32,22 @@ firebase.initializeApp(config);
 var database = firebase.database();
 $("#add-train").on("click", function (event) {
     event.preventDefault();
-    modalLauncher();
     var trainName = $("#train-input").val().trim();
     var destination = $("#destination-input").val().trim();
     var frequency = $("#frequency-input").val().trim();
     var firstRun = $("#firstRun-input").val().trim();
-    var newTrain = {
-        trainNameFB: trainName,
-        destinationFB: destination,
-        frequencyFB: frequency,
-        firstRunFB: firstRun
-    };
-    database.ref().push(newTrain);
+    if (trainName === "" || destination === "" || frequency === "" || firstRun === "") {
+        incompleteModalLauncher();
+    } else {
+        successModalLauncher();
+        var newTrain = {
+            trainNameFB: trainName,
+            destinationFB: destination,
+            frequencyFB: frequency,
+            firstRunFB: firstRun
+        };
+        database.ref().push(newTrain);
+    }
 })
 
 database.ref().on("child_added", function (snapshot) {
@@ -69,10 +73,19 @@ database.ref().on("child_added", function (snapshot) {
     console.log("Errors handled: " + errorObject.code);
 });
 
-function modalLauncher() {
-    var modal = document.getElementById('myModal');
+function successModalLauncher() {
+    var modal = document.getElementById('successModal');
     modal.style.display = "block";
     var span = document.getElementsByClassName("close")[0];
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+}
+
+function incompleteModalLauncher() {
+    var modal = document.getElementById('incompleteModal');
+    modal.style.display = "block";
+    var span = document.getElementsByClassName("close2")[0];
     span.onclick = function () {
         modal.style.display = "none";
     }
