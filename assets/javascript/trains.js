@@ -1,10 +1,6 @@
 // Other notes
-// 1. don't forget to load moment.js library ** DONE
-// 2. clean up modal
 // 3. general stylistic upgrades
 // 4. Too many global variables: move any many as possible out of global
-// 5. Center data in last three columns
-// 6. Table heading should be in color
 
 var frequency = 0;
 var firstRun = "";
@@ -13,8 +9,8 @@ var firstTrain = "";
 var elapsedMinutes = "";
 var prochainTrain = "";
 var toStation = "";
-var nextArrival = ""; // "Next Arrival" in the table. Not entered by user. Calculated using moment.js based on time of first run and current time.
-var minutesAway = ""; // "Minutes Away" in the table. Not entered by user. Candulated using moment.js based on nextArrival and current time.
+var nextArrival = ""; 
+var minutesAway = "";
 var trainName = "";
 var destination = "";
 var frequency = "";
@@ -60,9 +56,9 @@ database.ref().on("child_added", function (snapshot) {
     nextArrival = moment().add(toStation, 'minutes').format('hh:mm');
     var name = $("<td>").text(sv.trainNameFB);
     var dest = $("<td>").text(sv.destinationFB);
-    var freq = $("<td>").text(sv.frequencyFB);
-    var next = $("<td>").text(nextArrival);
-    var mins = $("<td>").text(toStation);
+    var freq = $("<td class='center'>").html(sv.frequencyFB);
+    var next = $("<td class='center'>").text(nextArrival);
+    var mins = $("<td class='center'>").text(toStation);
     newTrainDiv.append(name);
     newTrainDiv.append(dest);
     newTrainDiv.append(freq);
@@ -76,8 +72,7 @@ database.ref().on("child_added", function (snapshot) {
 function successModalLauncher() {
     var modal = document.getElementById('successModal');
     modal.style.display = "block";
-    var span = document.getElementsByClassName("close")[0];
-    span.onclick = function () {
+    modal.onclick = function () {
         modal.style.display = "none";
     }
 }
@@ -85,8 +80,13 @@ function successModalLauncher() {
 function incompleteModalLauncher() {
     var modal = document.getElementById('incompleteModal');
     modal.style.display = "block";
-    var span = document.getElementsByClassName("close2")[0];
-    span.onclick = function () {
+    modal.onclick = function () {
         modal.style.display = "none";
     }
 }
+
+// $("#incompleteModal").style(display = "block");
+// $("#incompleteModal").on("click", function (hide) {
+//     hide.
+//     $("#incompleteModal").style(display = "none");
+// })
