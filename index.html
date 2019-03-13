@@ -45,8 +45,7 @@
             </div>
             <div class="form-group">
                 <label for="firstRun"><strong>First Train Time (HH:mm - 24-hour clock)</strong></label>
-                <input type="text" class="form-control" id="firstRun-input" required
-                    placeholder="Enter time of first train in HH:mm">
+                <input id="firstRun-input" class="form-control" type="time" name="appt-time" value="06:00"></input>
             </div>
             <div class="form-group">
                 <label for="frequency"><strong>Frequency (min.)</strong></label>
@@ -60,12 +59,14 @@
     </div>
     <div id="successModal" class="modal">
         <div class="modal-content">
-            <p>Sir Topham Hatt Says: "Good job! You're a really useful engine: the train was successfully added."<br>(Click to close)</p>
+            <p>Sir Topham Hatt Says: "Good job - the train was successfully added! You're a really useful
+                engine."<br>(Click to close)</p>
         </div>
     </div>
     <div id="incompleteModal" class="modal">
         <div class="modal-content">
-            <p>Sir Topham Hatt Says: "You have caused confusion and delay! Please go back and complete all fields."<br>(Click to close)</p>
+            <p>Sir Topham Hatt Says: "You have caused confusion and delay! Please go back and complete all
+                fields."<br>(Click to close)</p>
         </div>
     </div>
 

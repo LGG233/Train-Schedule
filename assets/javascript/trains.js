@@ -53,7 +53,7 @@ database.ref().on("child_added", function (snapshot) {
     elapsedMinutes = moment().diff(moment(firstTrain), "minutes")
     prochainTrain = elapsedMinutes % sv.frequencyFB;
     toStation = sv.frequencyFB - prochainTrain;
-    nextArrival = moment().add(toStation, 'minutes').format('hh:mm');
+    nextArrival = moment().add(toStation, 'minutes').format('hh:mm A');
     var name = $("<td>").text(sv.trainNameFB);
     var dest = $("<td>").text(sv.destinationFB);
     var freq = $("<td class='center'>").html(sv.frequencyFB);
@@ -84,9 +84,3 @@ function incompleteModalLauncher() {
         modal.style.display = "none";
     }
 }
-
-// $("#incompleteModal").style(display = "block");
-// $("#incompleteModal").on("click", function (hide) {
-//     hide.
-//     $("#incompleteModal").style(display = "none");
-// })
