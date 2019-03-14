@@ -1,7 +1,3 @@
-// Other notes
-// 3. general stylistic upgrades
-// 4. Too many global variables: move any many as possible out of global
-
 var frequency = 0;
 var firstRun = "";
 var toStation = "";
@@ -45,7 +41,6 @@ $("#add-train").on("click", function (event) {
         database.ref().push(newTrain);
     }
 })
-
 database.ref().on("child_added", function (snapshot) {
     var sv = snapshot.val();
     var newTrainDiv = $("<tr>");
@@ -68,7 +63,6 @@ database.ref().on("child_added", function (snapshot) {
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
-
 function successModalLauncher() {
     var modal = document.getElementById('successModal');
     modal.style.display = "block";
@@ -76,7 +70,6 @@ function successModalLauncher() {
         modal.style.display = "none";
     }
 }
-
 function incompleteModalLauncher() {
     var modal = document.getElementById('incompleteModal');
     modal.style.display = "block";

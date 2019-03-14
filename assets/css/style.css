@@ -1,19 +1,12 @@
 .jumbotron {
     background-color: royalblue!important
 }
-
 .center {
     text-align: center;
 }
 thead {
     background-color: limegreen!important;
 }
-
-.scheduleWrapper {
-    background-image: url(../images/thomas.jpg);
-    background: repeat;
-}
-
 .table-header {
     background-color: indianred;
     line-height: 300%;
@@ -26,46 +19,43 @@ thead {
     margin: auto;
     left: 25;
     top: 25; 
-    width: 45%; 
-    height: 25%; 
-    background-color: royalblue;
+    width: 40%; 
+    height: 18%; 
+    background-color: grey 25%;
 }
-  
 .modal-content {
     margin: 0; 
-    padding: 20px;
+    padding: 30px 0;
     font-size: 11pt;
+    font-weight: bold;
+    background-color: royalblue;
     text-align: center;
     border: 1px solid #888;
-    width: 80%; 
-  }
-  
-  .close {
+    width: 60%; 
+}
+.close {
     color: blue;
     text-align: center;
     float: right;
     font-size: 11pt;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-
-  .close2 {
+}
+.close2 {
     color: blue;
     text-align: center;
     float: right;
     font-size: 11pt;
     font-weight: bold;
-  }
-  
-  .close2:hover,
-  .close2:focus {
+}
+.close2:hover,
+.close2:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
