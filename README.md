@@ -2,7 +2,9 @@
 
 # All Around the Island
 
-All Around the Island is a project that produces a train schedule based on the provided on an "add train" form. Users enter the train name, the station where the train is scheduled to stop, the time of day that train first runs, and the time it takes for the train to loop back to that station. The schedule calculates both the next time the train will arrive and the minutes until that happens.
+All Around the Island is a project that produces a train schedule based on information provided in an "add train" form. Users enter 1)  train name, 2) the station where the train is scheduled to stop, 3) the time of day that train first runs, and 4) the time it takes for the train to loop back to that station. The schedule calculates both the next time the train will arrive and the minutes until that happens.
+
+- - -
 
 # Observations
 
@@ -15,6 +17,6 @@ I also had some scoping problems that I solved using global variables. It wasn't
 # Why the Project Is Useful 
 This exercise was very useful. In addition to working with the new function (modal) and technology (moment.js), the homework required me to set up and manage an external database for data persistence, something I'll use regularly going forward. 
 
-The two new items, modals and moment.js, are things that I will no doubt use quite often going forward, so it was helpful to work with them a bit (even if my use was rudimentary). 
+The two new items, modals and moment.js, are also functionality that I will no doubt use quite often going forward, so it was helpful to work with them a bit (even if my use was rudimentary). 
 
-The code itself was fairly straightforward (with the exception of the moment.js function). I only created four functions (two of which are for the two modals used in the project). 
+The code itself was fairly straightforward (with the exception of the moment.js function). I created four functions, two of which wrere used by the  modals in the project. 
