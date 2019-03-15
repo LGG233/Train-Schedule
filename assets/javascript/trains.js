@@ -11,7 +11,6 @@ var trainName = "";
 var destination = "";
 var frequency = "";
 var firstRun = "";
-
 var config = {
     apiKey: "AIzaSyCkxMF68Nyb17ZEwQKpeU9e7Y0I-vfz8Jk",
     authDomain: "sodortrains-79f02.firebaseapp.com",
